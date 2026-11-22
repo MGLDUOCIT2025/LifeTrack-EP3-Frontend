@@ -1,6 +1,11 @@
+
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext.jsx";
 
 function Footer() {
+
+    // Identificar si el usuario tiene rol VENDEDOR.
+    const { esVendedor } = useAuth();
 
     return (
 
@@ -10,6 +15,7 @@ function Footer() {
 
                 <div className="row py-5 g-4">
 
+                    {/* INFORMACIÓN GENERAL */}
                     <div className="col-12 col-lg-4">
 
                         <h3>
@@ -29,57 +35,74 @@ function Footer() {
 
                     </div>
 
-
+                    {/* NAVEGACIÓN SEGÚN ROL */}
                     <div className="col-6 col-lg-2">
 
                         <h5>
                             Navegación
                         </h5>
 
-                        <Link to="/">
-                            Inicio
-                        </Link>
+                        {esVendedor ? (
 
-                        <Link to="/mi-dia">
-                            Mi Día
-                        </Link>
+                            // El vendedor solo ve su panel.
+                            <Link to="/vendedor">
+                                Panel Vendedor
+                            </Link>
 
-                        <Link to="/tareas">
-                            Mis Tareas
-                        </Link>
+                        ) : (
 
-                        <Link to="/productos">
-                            Tienda
-                        </Link>
+                            // Navegación normal para los demás.
+                            <>
+                                <Link to="/">
+                                    Inicio
+                                </Link>
 
-                        <Link to="/blog">
-                            Blog
-                        </Link>
+                                <Link to="/mi-dia">
+                                    Mi Día
+                                </Link>
 
-                    </div>
+                                <Link to="/tareas">
+                                    Mis Tareas
+                                </Link>
 
+                                <Link to="/productos">
+                                    Tienda
+                                </Link>
 
-                    <div className="col-6 col-lg-3">
-
-                        <h5>
-                            Información
-                        </h5>
-
-                        <Link to="/nosotros">
-                            Nosotros
-                        </Link>
-
-                        <Link to="/contacto">
-                            Contacto
-                        </Link>
-
-                        <Link to="/portafolio">
-                            Portafolio
-                        </Link>
+                                <Link to="/blog">
+                                    Blog
+                                </Link>
+                            </>
+                        )}
 
                     </div>
 
+                    {/* INFORMACIÓN: OCULTA PARA VENDEDOR */}
+                    {!esVendedor && (
 
+                        <div className="col-6 col-lg-3">
+
+                            <h5>
+                                Información
+                            </h5>
+
+                            <Link to="/nosotros">
+                                Nosotros
+                            </Link>
+
+                            <Link to="/contacto">
+                                Contacto
+                            </Link>
+
+                            <Link to="/portafolio">
+                                Portafolio
+                            </Link>
+
+                        </div>
+
+                    )}
+
+                    {/* INFORMACIÓN DE LIFETRACK */}
                     <div className="col-12 col-lg-3">
 
                         <h5>
@@ -101,7 +124,6 @@ function Footer() {
                 </div>
 
             </div>
-
 
             <div className="footer-final">
 
