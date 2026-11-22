@@ -1,0 +1,702 @@
+/*
+============================================================
+ADMINPREMIUM.CSS
+Panel administrador LifeTrack
+============================================================
+*/
+
+
+/*
+============================================================
+MENÚ
+============================================================
+*/
+
+.lt-admin-menu {
+
+    margin-bottom: 30px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+
+/*
+============================================================
+REPORTES
+============================================================
+*/
+
+.lt-admin-report-grid {
+
+    margin-bottom: 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 18px;
+
+}
+
+
+.lt-admin-report-card {
+
+    min-height: 175px;
+
+    padding: 24px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border:
+        1px solid
+        #dce6f2;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(
+            12,
+            46,
+            99,
+            0.07
+        );
+
+}
+
+
+.lt-admin-report-icon {
+
+    width: 46px;
+
+    height: 46px;
+
+    margin-bottom: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #edf4ff;
+
+    border-radius: 13px;
+
+    font-size: 21px;
+
+}
+
+
+.lt-admin-report-card p {
+
+    margin:
+        0 0 5px;
+
+    color: #627992;
+
+}
+
+
+.lt-admin-report-card strong {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #0b2e61;
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+}
+
+
+.lt-admin-report-card small {
+
+    color: #8292a6;
+
+}
+
+
+
+/*
+============================================================
+PRODUCTO DESTACADO
+============================================================
+*/
+
+.lt-admin-highlight {
+
+    margin-bottom: 30px;
+
+    padding: 26px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0c3268,
+            #176aff
+        );
+
+    color: white;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 16px 35px
+        rgba(
+            20,
+            83,
+            170,
+            0.18
+        );
+
+}
+
+
+.lt-admin-highlight h2 {
+
+    margin:
+        5px 0 8px;
+
+    color: white;
+
+}
+
+
+.lt-admin-highlight p {
+
+    margin: 0;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.87
+        );
+
+}
+
+
+.lt-admin-highlight
+.lt-admin-small-label {
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.76
+        );
+
+}
+
+
+
+/*
+============================================================
+BLOQUES
+============================================================
+*/
+
+.lt-admin-block {
+
+    margin-bottom: 30px;
+
+}
+
+
+.lt-admin-small-label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #176aff;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+}
+
+
+.lt-admin-title-row {
+
+    margin-bottom: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.lt-admin-title-row h2 {
+
+    margin: 0;
+
+}
+
+
+
+/*
+============================================================
+CABECERA DE SECCIÓN
+============================================================
+*/
+
+.lt-admin-section-heading {
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.lt-admin-section-heading h2 {
+
+    margin:
+        4px 0 5px;
+
+}
+
+
+.lt-admin-section-heading p {
+
+    margin: 0;
+
+    color: #6a7d94;
+
+}
+
+
+
+/*
+============================================================
+HISTORIAL
+============================================================
+*/
+
+.lt-admin-history-header {
+
+    margin-bottom: 24px;
+
+}
+
+
+.lt-admin-history-header h2 {
+
+    margin:
+        5px 0 7px;
+
+}
+
+
+.lt-admin-history-header p {
+
+    margin: 0;
+
+    color: #667b94;
+
+}
+
+
+
+/*
+============================================================
+FILTROS
+============================================================
+*/
+
+.lt-admin-filters {
+
+    margin-bottom: 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 18px;
+
+}
+
+
+.lt-admin-filters label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #15396d;
+
+    font-weight: 800;
+
+}
+
+
+.lt-admin-filter-result {
+
+    margin-bottom: 20px;
+
+    padding: 12px 15px;
+
+    background: #eef5ff;
+
+    color: #45627f;
+
+    border-radius: 12px;
+
+}
+
+
+.lt-admin-filter-result strong {
+
+    color: #176aff;
+
+}
+
+
+
+/*
+============================================================
+TABLAS
+============================================================
+*/
+
+.lt-admin-table-scroll {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+
+.lt-admin-table-scroll table {
+
+    min-width: 850px;
+
+}
+
+
+.lt-admin-products-list {
+
+    min-width: 180px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+
+.lt-admin-products-list span {
+
+    color: #586f89;
+
+    font-size: 12px;
+
+}
+
+
+
+/*
+============================================================
+ESTADOS
+============================================================
+*/
+
+.lt-admin-status {
+
+    display: inline-flex;
+
+    min-width: 92px;
+
+    padding:
+        7px 11px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+}
+
+
+.lt-admin-status.success {
+
+    color: #087a55;
+
+    background: #dff7ed;
+
+}
+
+
+.lt-admin-status.rejected {
+
+    color: #c62d3b;
+
+    background: #ffe7e9;
+
+}
+
+
+
+/*
+============================================================
+VACÍO
+============================================================
+*/
+
+.lt-admin-empty {
+
+    padding:
+        45px 20px;
+
+    text-align: center;
+
+}
+
+
+.lt-admin-empty span {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 42px;
+
+}
+
+
+.lt-admin-empty h3 {
+
+    margin:
+        0 0 8px;
+
+    color: #12386d;
+
+}
+
+
+.lt-admin-empty p {
+
+    margin: 0;
+
+    color: #77899e;
+
+}
+
+
+
+/*
+============================================================
+FORMULARIO PRODUCTOS
+============================================================
+*/
+
+.lt-admin-product-form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 20px;
+
+}
+
+
+.lt-admin-product-form-grid label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #183b6e;
+
+    font-weight: 700;
+
+}
+
+
+.lt-admin-form-full {
+
+    grid-column:
+        1 / -1;
+
+}
+
+
+.lt-admin-form-actions {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+
+/*
+============================================================
+ACCIONES TABLA
+============================================================
+*/
+
+.lt-admin-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+}
+
+
+.lt-admin-restore {
+
+    margin-top: 20px;
+
+}
+
+
+
+/*
+============================================================
+RESPONSIVE
+============================================================
+*/
+
+@media (max-width: 1000px) {
+
+    .lt-admin-report-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+    }
+
+}
+
+
+
+@media (max-width: 700px) {
+
+    .lt-admin-menu {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .lt-admin-menu .btn {
+
+        width: 100%;
+
+    }
+
+
+    .lt-admin-report-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .lt-admin-title-row,
+    .lt-admin-section-heading {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .lt-admin-filters {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .lt-admin-product-form-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .lt-admin-form-full {
+
+        grid-column:
+            auto;
+
+    }
+
+
+    .lt-admin-report-card {
+
+        min-height: auto;
+
+    }
+
+}

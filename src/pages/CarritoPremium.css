@@ -1,0 +1,797 @@
+/*
+============================================================
+CARRITOPREMIUM.CSS
+LifeTrack
+============================================================
+
+Estilos exclusivos del proceso de compra.
+
+No modifica:
+- Home
+- Header
+- Mi Día
+- Mis Tareas
+- Tienda
+
+============================================================
+*/
+
+
+/*
+============================================================
+OVERLAY
+============================================================
+*/
+
+.lt-checkout-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 5000;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow-y: auto;
+
+    background:
+        rgba(
+            4,
+            14,
+            31,
+            0.78
+        );
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+}
+
+
+
+/*
+============================================================
+VENTANA
+============================================================
+*/
+
+.lt-checkout-modal {
+
+    width: min(
+        520px,
+        100%
+    );
+
+    position: relative;
+
+    padding:
+        38px;
+
+    box-sizing: border-box;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        rgba(
+            13,
+            61,
+            126,
+            0.12
+        );
+
+    border-radius:
+        28px;
+
+    box-shadow:
+        0 30px 80px
+        rgba(
+            2,
+            18,
+            44,
+            0.35
+        );
+
+    color:
+        #0b2e61;
+
+}
+
+
+
+/*
+============================================================
+CERRAR
+============================================================
+*/
+
+.lt-checkout-close {
+
+    width: 38px;
+
+    height: 38px;
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 18px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background:
+        #eef4fc;
+
+    color:
+        #173b6f;
+
+    font-size:
+        25px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+}
+
+
+
+/*
+============================================================
+ICONO
+============================================================
+*/
+
+.lt-checkout-icon {
+
+    width: 64px;
+
+    height: 64px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius:
+        18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf5ff,
+            #dceaff
+        );
+
+    font-size:
+        31px;
+
+}
+
+
+
+/*
+============================================================
+TEXTOS
+============================================================
+*/
+
+.lt-checkout-label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color:
+        #176aff;
+
+    font-size:
+        12px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        3px;
+
+}
+
+
+.lt-checkout-modal h2 {
+
+    margin:
+        0 0 10px;
+
+    color:
+        #0b2e61;
+
+    font-size:
+        30px;
+
+    font-weight:
+        900;
+
+}
+
+
+.lt-checkout-modal > p,
+.lt-checkout-result > p {
+
+    margin:
+        0 0 24px;
+
+    color:
+        #677c97;
+
+    line-height:
+        1.6;
+
+}
+
+
+
+/*
+============================================================
+CLIENTE
+============================================================
+*/
+
+.lt-checkout-user {
+
+    margin-bottom:
+        18px;
+
+    padding:
+        15px 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    background:
+        #f5f8fc;
+
+    border-radius:
+        14px;
+
+}
+
+
+.lt-checkout-user span {
+
+    color:
+        #75869d;
+
+}
+
+
+.lt-checkout-user strong {
+
+    color:
+        #12386d;
+
+}
+
+
+
+/*
+============================================================
+RESUMEN
+============================================================
+*/
+
+.lt-checkout-summary {
+
+    overflow: hidden;
+
+    margin-bottom:
+        22px;
+
+    border:
+        1px solid
+        #dce6f1;
+
+    border-radius:
+        16px;
+
+}
+
+
+.lt-checkout-summary > div {
+
+    padding:
+        15px 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid
+        #e8edf4;
+
+}
+
+
+.lt-checkout-summary > div:last-child {
+
+    border-bottom: 0;
+
+}
+
+
+.lt-checkout-summary span {
+
+    color:
+        #637890;
+
+}
+
+
+.lt-checkout-summary strong {
+
+    color:
+        #0b2e61;
+
+}
+
+
+
+/*
+============================================================
+SIMULACIÓN
+============================================================
+*/
+
+.lt-checkout-demo {
+
+    padding:
+        18px;
+
+    background:
+        #f7f9fc;
+
+    border-radius:
+        18px;
+
+}
+
+
+.lt-checkout-demo p {
+
+    margin:
+        0 0 14px;
+
+    color:
+        #61758d;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.5;
+
+}
+
+
+.lt-checkout-success-button,
+.lt-checkout-error-button {
+
+    width: 100%;
+
+    min-height:
+        48px;
+
+    padding:
+        0 18px;
+
+    border:
+        0;
+
+    border-radius:
+        12px;
+
+    font-family:
+        inherit;
+
+    font-size:
+        14px;
+
+    font-weight:
+        800;
+
+    cursor:
+        pointer;
+
+}
+
+
+.lt-checkout-success-button {
+
+    margin-bottom:
+        10px;
+
+    color:
+        #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0c996b,
+            #12b77f
+        );
+
+}
+
+
+.lt-checkout-error-button {
+
+    color:
+        #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #bf3640,
+            #e34d58
+        );
+
+}
+
+
+
+/*
+============================================================
+RESULTADOS
+============================================================
+*/
+
+.lt-checkout-result {
+
+    text-align:
+        center;
+
+}
+
+
+.lt-result-icon {
+
+    width: 76px;
+
+    height: 76px;
+
+    margin:
+        0 auto 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius:
+        50%;
+
+    color:
+        #ffffff;
+
+    font-size:
+        38px;
+
+    font-weight:
+        900;
+
+}
+
+
+.lt-result-success {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b9c69,
+            #17c587
+        );
+
+    box-shadow:
+        0 15px 32px
+        rgba(
+            10,
+            164,
+            109,
+            0.25
+        );
+
+}
+
+
+.lt-result-error {
+
+    background:
+        linear-gradient(
+            135deg,
+            #c12e3b,
+            #ef5260
+        );
+
+    box-shadow:
+        0 15px 32px
+        rgba(
+            200,
+            47,
+            61,
+            0.24
+        );
+
+}
+
+
+
+/*
+============================================================
+ORDEN
+============================================================
+*/
+
+.lt-order-card {
+
+    margin:
+        25px 0;
+
+    overflow:
+        hidden;
+
+    text-align:
+        left;
+
+    border:
+        1px solid
+        #dce6f1;
+
+    border-radius:
+        17px;
+
+    background:
+        #f8fafe;
+
+}
+
+
+.lt-order-card > div {
+
+    min-height:
+        55px;
+
+    padding:
+        12px 16px;
+
+    box-sizing:
+        border-box;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        16px;
+
+    border-bottom:
+        1px solid
+        #e5ebf3;
+
+}
+
+
+.lt-order-card > div:last-child {
+
+    border-bottom:
+        0;
+
+}
+
+
+.lt-order-card span {
+
+    color:
+        #6d7f96;
+
+}
+
+
+.lt-order-card strong {
+
+    color:
+        #153965;
+
+    text-align:
+        right;
+
+}
+
+
+.lt-order-reason {
+
+    align-items:
+        flex-start !important;
+
+}
+
+
+.lt-status-success {
+
+    color:
+        #099667 !important;
+
+}
+
+
+.lt-status-error {
+
+    color:
+        #d63847 !important;
+
+}
+
+
+
+/*
+============================================================
+BOTONES RESULTADO
+============================================================
+*/
+
+.lt-checkout-main-button {
+
+    width:
+        100%;
+
+    min-height:
+        48px;
+
+}
+
+
+.lt-checkout-secondary-button {
+
+    width:
+        100%;
+
+    min-height:
+        46px;
+
+    margin-top:
+        10px;
+
+    border:
+        1px solid
+        #ccd9e8;
+
+    border-radius:
+        10px;
+
+    background:
+        #ffffff;
+
+    color:
+        #183c6d;
+
+    font-family:
+        inherit;
+
+    font-weight:
+        800;
+
+    cursor:
+        pointer;
+
+}
+
+
+
+/*
+============================================================
+RESPONSIVE
+============================================================
+*/
+
+@media (max-width: 600px) {
+
+    .lt-checkout-overlay {
+
+        padding:
+            14px;
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .lt-checkout-modal {
+
+        margin:
+            20px 0;
+
+        padding:
+            28px 20px;
+
+        border-radius:
+            22px;
+
+    }
+
+
+    .lt-checkout-modal h2 {
+
+        font-size:
+            25px;
+
+    }
+
+
+    .lt-checkout-icon {
+
+        width:
+            56px;
+
+        height:
+            56px;
+
+        font-size:
+            27px;
+
+    }
+
+
+    .lt-order-card > div {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            5px;
+
+    }
+
+
+    .lt-order-card strong {
+
+        text-align:
+            left;
+
+        word-break:
+            break-word;
+
+    }
+
+}
